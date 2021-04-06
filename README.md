@@ -1,1 +1,1 @@
-"# typescript_study" 
+Estudos relacionados a linguagem de TypeScript.
