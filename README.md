@@ -1,1 +1,1 @@
-Estudos relacionados a linguagem de TypeScript.
+Estudos relacionados a linguagem TypeScript.
