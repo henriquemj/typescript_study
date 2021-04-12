@@ -19,6 +19,10 @@ export class NegociacaoController {
 
     adiciona(event: Event) {
 
+        const t1 = performance.now();
+        
+        console.log('Tempo de execução do método adiciona(): ${(t2 - t1)/1000} segundos');
+
         event.preventDefault();
 
         let data = new Date(this._inputData.val().replace(/-/g, ','));
@@ -39,6 +43,10 @@ export class NegociacaoController {
 
         this._negociacoesView.update(this._negociacoes);
         this._mensagemView.update('Negociação adicionada com sucesso!');
+
+        const t2 = performance.now();
+
+        console.log('o tempo de execução de adiciona é de ${t2 - t1} ms');
     }
 
     private _ehDiaUtil(data: Date) {
