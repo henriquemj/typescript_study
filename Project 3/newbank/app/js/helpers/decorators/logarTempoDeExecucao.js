@@ -11,7 +11,7 @@ System.register([], function (exports_1, context_1) {
                     unidade = 's';
                     divisor = 1000;
                 }
-                console.log('--------------');
+                console.log('---------------');
                 console.log(`parâmetros passados para o método ${propertyKey}: ${JSON.stringify(args)}`);
                 const t1 = performance.now();
                 const retorno = metodoOriginal.apply(this, args);

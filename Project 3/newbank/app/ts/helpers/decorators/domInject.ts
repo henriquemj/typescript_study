@@ -1,18 +1,21 @@
-export function domInject(selector: string) {
+export function domInject(seletor: string) {
 
-    return function(target:any, key: string) {
-        let elemento:JQuery;
+    return function(target: any, key: string) {
+
+        let elemento: JQuery;
 
         const getter = function() {
+
             if(!elemento) {
-                console.log(`buscando ${selector} para injetar em ${key}`);
-                elemento = $(selector);
+                console.log(`buscando  ${seletor} para injetar em ${key}`);
+                elemento = $(seletor);
             }
+
             return elemento;
         }
 
-        Object.defineProperty(target, key, {
-            get: getter
-        });
+       Object.defineProperty(target, key, {
+           get: getter
+       });
     }
 }
